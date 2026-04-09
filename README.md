@@ -1,9 +1,6 @@
 PHP Spreadsheet Parser
 ======================
 
-[![Code Quality](https://github.com/Ang3/php-spreadsheet-parser/actions/workflows/php_lint.yml/badge.svg)](https://github.com/Ang3/php-spreadsheet-parser/actions/workflows/php_lint.yml)
-[![PHPUnit Tests](https://github.com/Ang3/php-spreadsheet-parser/actions/workflows/phpunit.yml/badge.svg)](https://github.com/Ang3/php-spreadsheet-parser/actions/workflows/phpunit.yml)
-[![Symfony Integration](https://github.com/Ang3/php-spreadsheet-parser/actions/workflows/symfony.yml/badge.svg)](https://github.com/Ang3/php-spreadsheet-parser/actions/workflows/symfony.yml)
 [![Latest Stable Version](https://poser.pugx.org/ang3/php-spreadsheet-parser/v/stable)](https://packagist.org/packages/ang3/php-spreadsheet-parser)
 [![Total Downloads](https://poser.pugx.org/ang3/php-spreadsheet-parser/downloads)](https://packagist.org/packages/ang3/php-spreadsheet-parser)
 
