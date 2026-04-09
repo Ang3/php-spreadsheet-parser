@@ -1,0 +1,34 @@
+{
+	"name": "ang3/php-spreadsheet-parser",
+	"version": "1.0.0",
+	"type": "library",
+	"homepage": "https://github.com/Ang3/php-spreadsheet-parser",
+	"description": "PHP Spreadsheet Parser.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Joanis ROUANET",
+			"homepage": "https://github.com/Ang3"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Ang3\\Component\\Spreadsheet\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Ang3\\Component\\Spreadsheet\\Tests\\": "tests/"
+		}
+	},
+	"require": {
+		"php": ">=8.1",
+		"phpoffice/phpspreadsheet": "^5.0",
+		"webmozart/assert": "^1.12"
+    },
+    "require-dev": {
+		"symfony/test-pack": "^1.0",
+		"phpstan/phpstan": "^2.1",
+		"friendsofphp/php-cs-fixer": "^3.94"
+	}
+}
