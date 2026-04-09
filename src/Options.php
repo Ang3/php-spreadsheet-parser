@@ -27,9 +27,9 @@ class Options
      * @param int<1,max>|null $headersRowIndex               The 1-based index of the header row.
      *                                                       If null, the header row will be automatically detected.
      *                                                       Ignored if $hasHeaders is false.
-     * @param int<1,max>|null $dataStartRowIndex             The 1-based index of the first data row.
+     * @param int<1,max>|null $dataFirstRowIndex             The 1-based index of the first data row.
      *                                                       If null, it will be inferred (typically the row after headers).
-     * @param int<1,max>|null $dataEndRowIndex               The 1-based index of the last data row.
+     * @param int<1,max>|null $dataLastRowIndex               The 1-based index of the last data row.
      *                                                       If null, reading continues until the end of the sheet.
      * @param bool            $convertColumnLettersToNumbers Whether spreadsheet column identifiers (e.g. "A", "B", "AA")
      *                                                       should be converted to zero- or one-based numeric indexes.
@@ -40,21 +40,21 @@ class Options
      * @throws \InvalidArgumentException If configuration is inconsistent
      */
     public function __construct(public readonly bool $hasHeaders = true,
-        public readonly ?int $firstRowIndex = null,
-        public readonly ?int $headersRowIndex = null,
-        public readonly ?int $dataStartRowIndex = null,
-        public readonly ?int $dataEndRowIndex = null,
-        public readonly bool $convertColumnLettersToNumbers = false,
-        public readonly bool $formulaEvaluation = false,
-        public readonly bool $formatterEnabled = true,
-        public readonly bool $skipEmptyRows = true)
+        public readonly ?int                         $firstRowIndex = null,
+        public readonly ?int                         $headersRowIndex = null,
+        public readonly ?int                         $dataFirstRowIndex = null,
+        public readonly ?int                         $dataLastRowIndex = null,
+        public readonly bool                         $convertColumnLettersToNumbers = false,
+        public readonly bool                         $formulaEvaluation = false,
+        public readonly bool                         $formatterEnabled = true,
+        public readonly bool                         $skipEmptyRows = true)
     {
         if (
-            null !== $this->dataStartRowIndex
-            && null !== $this->dataEndRowIndex
-            && $this->dataStartRowIndex > $this->dataEndRowIndex
+            null !== $this->dataFirstRowIndex
+            && null !== $this->dataLastRowIndex
+            && $this->dataFirstRowIndex > $this->dataLastRowIndex
         ) {
-            throw new \InvalidArgumentException('"dataStartRowIndex" cannot be greater than "dataEndRowIndex".');
+            throw new \InvalidArgumentException('"dataFirstRowIndex" cannot be greater than "dataLastRowIndex".');
         }
     }
 

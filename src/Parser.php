@@ -71,11 +71,11 @@ class Parser
                     continue;
                 }
 
-                if ($options->dataStartRowIndex && $row->getRowIndex() < $options->dataStartRowIndex) {
+                if ($options->dataFirstRowIndex && $row->getRowIndex() < $options->dataFirstRowIndex) {
                     continue;
                 }
 
-                if ($options->dataEndRowIndex && $row->getRowIndex() > $options->dataEndRowIndex) {
+                if ($options->dataLastRowIndex && $row->getRowIndex() > $options->dataLastRowIndex) {
                     break;
                 }
 
