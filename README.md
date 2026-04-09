@@ -90,13 +90,17 @@ Run tests
 ### With Docker
 
 ```$ git clone https://github.com/Ang3/php-spreadsheet-parser.git```
+
 ```$ make up```
+
 ```$ bin/test```
 
 ### In PHP environment
 
 ```$ git clone https://github.com/Ang3/php-spreadsheet-parser.git```
+
 ```$ composer install```
+
 ```$ vendor/bin/simple-phpunit```
 
 That's it!
